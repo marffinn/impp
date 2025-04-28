@@ -1,0 +1,10 @@
+^C:\USERS\MARFF\DOCUMENTS\AUGMENT-PROJECTS\IMPP\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/marff/Documents/augment-projects/impp -BC:/Users/marff/Documents/augment-projects/impp/build --check-stamp-file C:/Users/marff/Documents/augment-projects/impp/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
